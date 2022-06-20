@@ -1,6 +1,3 @@
-import java.sql.Array;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         homeWork1();
@@ -32,12 +29,12 @@ public class Main {
     }
     private static void homeWork3() {
         int[] arr = generateRandomArray();
-        double avarage=0;
+        double avarage;
         int summ=0;
         for (int element : arr) {
             summ+=element;
         }
-        avarage=(double)summ/30;
+        avarage=(double)summ/30.0;
         System.out.println("Средняя сумма трат за месяц составила "+avarage+" рублей.");
     }
 
