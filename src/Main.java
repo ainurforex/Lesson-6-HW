@@ -20,8 +20,11 @@ public class Main {
         int min=arr[0];
         int max=arr[0];
         for (int element : arr) {
-            if (element<min)min=element;
-            if (element>max)max=element;
+            if (element<min){
+                min=element;
+            }else if (element>max){
+                max=element;
+            }
         }
         System.out.println("Минимальная сумма трат за день составила "+min+" рублей. "+
                 "Максимальная сумма трат за день составила "+max+" рублей.");
@@ -30,11 +33,13 @@ public class Main {
     private static void homeWork3() {
         int[] arr = generateRandomArray();
         double avarage;
+        int dayInMonth=30;
         int summ=0;
         for (int element : arr) {
             summ+=element;
         }
-        avarage=(double)summ/30.0;
+        avarage=(double)summ/dayInMonth;
+        avarage = Math.round(avarage * 100) / 100.0;
         System.out.println("Средняя сумма трат за месяц составила "+avarage+" рублей.");
     }
 
